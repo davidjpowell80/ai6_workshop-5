@@ -106,10 +106,51 @@ fields @timestamp, @message
 
 Complete the following incident report template:
 
-- **What happened:** _______________________________________________
-- **Evidence:** _______________________________________________
-- **Classification:** _______________________________________________
-- **First safe action:** _______________________________________________
+- **What happened:** A customer raised a ticket with more than 5000 chars
+- **Evidence:** The exeption was logged in the Cloudwatch logs
+- Field	Value
+@entity.KeyAttributes.Name	
+AI6-Unit5W-ScaleOrFail-preprocess
+Explore related
+@entity.KeyAttributes.Type	
+Service
+@entity.KeyAttributes.Environment	
+lambda:default
+@aws.account	
+248547463735
+@aws.region	
+us-east-1
+@data_format	
+Default
+@data_source_name	
+Unknown
+@data_source_type	
+Unknown
+@entity.Attributes.Lambda.Function	
+AI6-Unit5W-ScaleOrFail-preprocess
+@entity.Attributes.PlatformType	
+AWS::Lambda
+@ingestionTime	
+1772548372311
+@log	
+248547463735:/aws/lambda/AI6-Unit5W-ScaleOrFail-preprocess
+@logGroupId	
+67da104c-d5fa-480d-ad99-1cc66880e610
+@logStream	
+2026/03/03/[$LATEST]d780bf9d67b24dbd979c613640bcd94e 
+@logStreamId	
+67da104c-d5fa-480d-ad99-1cc66880e610::d5ec93f02f2ab46023133a99e4c0412af4f51fe2c3fdb0140dcb9aabb7bba4f4::1772548372301
+@message	
+[ERROR] ValueError: PayloadTooLarge: text length 5100 > 5000
+Traceback (most recent call last):
+  File "/var/task/index.py", line 26, in handler
+    raise ValueError(f"PayloadTooLarge: text length {len(text)} > {MAX_CHARS}")
+@timestamp	
+1772548368130
+  
+- **Classification:** Bad Input 
+- **First safe action:** Add a check before calling the model to validate the inputs
+
 
 ⚠️ **Warning:** Be precise with your evidence. Point to the specific error message and the specific metric or log entry, not just "it failed."
 
