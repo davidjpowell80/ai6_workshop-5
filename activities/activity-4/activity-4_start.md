@@ -37,7 +37,7 @@ Wait for completion and record the total batch duration.
 
 | Metric              | Your Value |
 |---------------------|------------|
-| Total batch duration |           |
+| Total batch duration |     36 seconds      |
 | Tickets processed    | 500       |
 | Max concurrency      | 10        |
 
@@ -49,9 +49,9 @@ Fill in the comparison table using your results from Activity 3 and this activit
 
 | Metric                | MAX_CONCURRENCY=2 | MAX_CONCURRENCY=10 |
 |-----------------------|--------------------|---------------------|
-| Total batch duration  |                    |                     |
+| Total batch duration  |       149             |         36            |
 | Tickets processed     | 500                | 500                 |
-| Throughput (tickets/s)|                    |                     |
+| Throughput (tickets/s)|               3.35     |           13.8          |
 
 💡 **Tip:** Calculate throughput as `tickets / duration`. For example: 500 tickets / 126 s = ~4.0 tickets/s vs 500 tickets / 41 s = ~12.2 tickets/s.
 
@@ -75,9 +75,11 @@ Fill in the comparison table using your results from Activity 3 and this activit
 
 In one sentence, explain what changed and why:
 
-> "We increased __________ from ___ to ___, which meant __________."
+> "We increased __The number of tickets processed per per second ________ from 3.35 to 13.8, which meant we are servicing our customers quicker."
 
 💡 **Tip:** Focus on the difference between making each individual execution faster (vertical scaling) vs running more executions at the same time (horizontal scaling). Which one did we do?
+
+We horizontally scalled (Scaled out) . increased costs for a short period of time, managed by AWS managed service
 
 ---
 
