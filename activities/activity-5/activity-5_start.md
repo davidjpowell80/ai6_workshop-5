@@ -112,6 +112,8 @@ Write your answer to this question:
 
 > **"How does orchestration help you see where time is spent?"**
 
+We are able to analyse the logs to calculate time spent in each stage of the process
+
 Think about:
 - How the Map state separates each ticket's processing into distinct steps
 - How MaxConcurrency controls throughput
