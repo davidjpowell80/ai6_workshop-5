@@ -78,10 +78,10 @@ Which of the 4 leaves matches this incident? For each of the other 3, explain wh
 
 | RCA Leaf | Matches? | Why / Why not? |
 |---|---|---|
-| THROTTLED | | |
-| EXHAUSTED | | |
-| TIMED OUT | | |
-| BAD INPUT | | |
+| THROTTLED | No | No requests were made  |
+| EXHAUSTED | No | Failed at the preprocess step, no concurrent executions recorded |
+| TIMED OUT | No | Failed fast with a pre processing check error message |
+| BAD INPUT | Yes | Error message indicates the payload is too large - "errorMessage": "PayloadTooLarge: text length 5100 > 5000",  |
 
 ---
 
