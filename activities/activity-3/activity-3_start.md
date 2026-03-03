@@ -41,7 +41,7 @@ When the script finishes, it prints a summary. Record the total duration:
 
 | Metric              | Your Value |
 |---------------------|------------|
-| Total batch duration |           |
+| Total batch duration | 149 Seconds          |
 | Tickets processed    | 500        |
 | Max concurrency      | 2         |
 
