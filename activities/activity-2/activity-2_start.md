@@ -62,7 +62,7 @@ See [AWS service docs and key quotes](../../docs/aws_service_docs.md).
 
 **Answer the following:**
 
-> "The model step is **___** because **___**."
+> "The model step is **Embed** because **the output contains the model name and the confidence score**."
 
 ---
 
